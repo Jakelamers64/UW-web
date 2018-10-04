@@ -14,6 +14,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <!--bootstrap code end-->
+    <!--my header stuff start-->
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+    <!--my header stuff end-->
   </head>
   <body>
     <!--navbar code-->
@@ -49,22 +52,17 @@
       </div>
     </nav>
     <!--end of nav bar-->
-    <div class = "container">
+    <div id = "newsContainer" class = "container">
       <a>News</a>
       <!--start reddit news subreddit-->
       <!--documentation http://embed.redditjs.com/-->
-      <script src='https://redditjs.com/subreddit.js'
-      data-subreddit='politics'
-      data-height='500'
-      data-width='500'
-      data-sort='top'
-      data-theme='light'
-      data-timeframe='month'
-      data-subreddit-mode='grid'>
+      <script src ='https://redditjs.com/subreddit.js'
+      data-subreddit ='politics'
+      data-theme = 'dark'
+      data-width = document.getElementById("newsContainer").offsetWidth;
+      data-height = document.getElementById("newsContainer").offsetHeight;
+      >
       </script>
-
-      <script src='https://redditjs.com/subreddit.js'></script>
-
       <!--end reddit news subreddit-->
     </div>
   </body>
